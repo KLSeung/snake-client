@@ -1,3 +1,5 @@
+const { connect } = require("http2");
+
 // STores the active TCP connection object
 let connection;
 
@@ -23,6 +25,12 @@ const handleUserInput = (key) => {
     connection.write('Move: down');
   } else if (key === '\u0061') {
     connection.write('Move: left');
+  } else if (key === '\u0068') {
+    connection.write('Say: Hi!')
+  } else if (key === '\u0070') {
+    connection.write('Say: Pineapple')
+  } else if (key === "\u0066") {
+    connection.write('Say: Pay Respect');
   }
 };
 
