@@ -15,6 +15,10 @@ const connect = function() {
   conn.on('connect', () => {
     console.log('Successfully connected!');
     conn.write('Name: KLS');
+    // conn.write("Move: up");
+    // setInterval(() => {
+    //   conn.write("Move: up")
+    // }, 50);
   });
 
   return conn;
